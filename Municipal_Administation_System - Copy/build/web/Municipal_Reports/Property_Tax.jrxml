@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Property_Tax" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dc927aa6-be02-4016-ba6f-9f263a110833">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     property_tax_generation.`pid` AS property_tax_generation_pid,
+     property_tax_generation.`owner` AS property_tax_generation_owner,
+     property_tax_generation.`pno` AS property_tax_generation_pno,
+     property_tax_generation.`bno` AS property_tax_generation_bno,
+     property_tax_generation.`bdate` AS property_tax_generation_bdate,
+     property_tax_generation.`etax` AS property_tax_generation_etax,
+     property_tax_generation.`gtax` AS property_tax_generation_gtax,
+     property_tax_generation.`swtax` AS property_tax_generation_swtax,
+     property_tax_generation.`mitax` AS property_tax_generation_mitax,
+     property_tax_generation.`ptax` AS property_tax_generation_ptax,
+     property_tax_generation.`aamount` AS property_tax_generation_aamount,
+     property_tax_generation.`camount` AS property_tax_generation_camount,
+     property_tax_generation.`tamount` AS property_tax_generation_tamount,
+     property_tax_generation.`status` AS property_tax_generation_status
+FROM
+     `property_tax_generation` property_tax_generation]]>
+	</queryString>
+	<field name="property_tax_generation_pid" class="java.lang.Integer"/>
+	<field name="property_tax_generation_owner" class="java.lang.String"/>
+	<field name="property_tax_generation_pno" class="java.lang.String"/>
+	<field name="property_tax_generation_bno" class="java.lang.String"/>
+	<field name="property_tax_generation_bdate" class="java.lang.String"/>
+	<field name="property_tax_generation_etax" class="java.lang.Long"/>
+	<field name="property_tax_generation_gtax" class="java.lang.Long"/>
+	<field name="property_tax_generation_swtax" class="java.lang.Long"/>
+	<field name="property_tax_generation_mitax" class="java.lang.Long"/>
+	<field name="property_tax_generation_ptax" class="java.lang.Long"/>
+	<field name="property_tax_generation_aamount" class="java.lang.Long"/>
+	<field name="property_tax_generation_camount" class="java.lang.Long"/>
+	<field name="property_tax_generation_tamount" class="java.lang.Long"/>
+	<field name="property_tax_generation_status" class="java.lang.String"/>
+	<group name="property_tax_generation_pid">
+		<groupExpression><![CDATA[$F{property_tax_generation_pid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="303" y="10" width="196" height="40" uuid="f08116e6-3268-482e-aa03-8ed08002b3b2"/>
+				<textElement>
+					<font fontName="Arial Black" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Property Tax Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="21" height="20" uuid="c4a82e2a-e753-44ca-bb64-b7d333d61a96"/>
+				<text><![CDATA[P.Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="0" width="169" height="20" uuid="faec8103-c4bc-4d0a-98aa-b1e3996dc433"/>
+				<text><![CDATA[Owner Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="79" height="20" uuid="55a1bbf9-5de5-4ee9-a5b9-7721ea244baa"/>
+				<text><![CDATA[Property No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="269" y="0" width="57" height="20" uuid="338d2ff2-8c8a-4a82-90d6-4f12a8243c33"/>
+				<text><![CDATA[Bill No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="0" width="57" height="20" uuid="95fd2c2d-34c5-48a8-abe6-35688e25f1f4"/>
+				<text><![CDATA[Bill Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="0" width="52" height="20" uuid="f4fea040-026e-457d-ae2d-cc858caaa581"/>
+				<text><![CDATA[Education Tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="0" width="46" height="20" uuid="a33e44d6-9934-4611-8259-c9451d92813d"/>
+				<text><![CDATA[General Tax]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="0" width="45" height="20" uuid="a5055e87-8f4c-4d61-b430-524cd962f86c"/>
+				<text><![CDATA[S.W]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="544" y="0" width="43" height="20" uuid="4a434c1a-c904-4d76-9e4b-f16842c1341e"/>
+				<text><![CDATA[M.Interest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="0" width="40" height="20" uuid="f4ee71d5-d794-48d8-a5e5-a1e6359568e9"/>
+				<text><![CDATA[Penalty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="0" width="47" height="20" uuid="e14ca06a-c49e-4f60-b7c6-1b49aa064374"/>
+				<text><![CDATA[Arrears]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="674" y="0" width="43" height="20" uuid="4f2ab1ea-bb4d-4aaf-b82b-88ee8a6f279b"/>
+				<text><![CDATA[Current]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="717" y="0" width="43" height="20" uuid="88dacd22-fa82-4583-8225-1f8c37acab03"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="760" y="0" width="38" height="20" uuid="cfabbe72-7c7d-4874-9c20-1303786a6a15"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="798" height="1" uuid="06b3fd8b-2af9-4d95-9f50-52c6c86e44f5"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="21" height="20" uuid="c6b42b41-41bb-4d69-9be8-2e7b8dc69f8b"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_pid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="0" width="169" height="20" uuid="0b09d10b-67b8-4672-bf8b-a3f4d3fe371d"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_owner}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="79" height="20" uuid="81c255a5-0db0-42a1-bdd3-2c2095d9d2a1"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_pno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="269" y="0" width="57" height="20" uuid="c3b2ab71-54da-49e0-879d-eff37cfa802d"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_bno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="57" height="20" uuid="da5fa9d7-ab05-4c54-b369-06c16f12f9ad"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_bdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="0" width="52" height="20" uuid="2f9c3e7f-b197-427e-9855-71ee27469eff"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_etax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="453" y="0" width="46" height="20" uuid="8511d25e-c4a1-4640-baf3-1972c0f4328d"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_gtax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="499" y="0" width="45" height="20" uuid="4e6dad36-9092-4a18-a365-d6a242af7606"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_swtax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="544" y="0" width="43" height="20" uuid="221da762-53ce-47b9-9b65-59b3b72bfd85"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_mitax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="587" y="0" width="40" height="20" uuid="9e8ce720-d62d-4642-a19b-b1e732676e49"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_ptax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="627" y="0" width="47" height="20" uuid="08b119fa-0657-4f88-8772-1eb6884e26f0"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_aamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="674" y="0" width="43" height="20" uuid="efbf5cc1-5e73-412c-8467-f189d5d4fad8"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_camount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="717" y="0" width="43" height="20" uuid="4aec7ca9-0bf0-4372-ae9d-dd8287258a16"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_tamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="760" y="0" width="38" height="20" uuid="478c7f90-3743-4a30-a3fe-583d3938eb2e"/>
+				<textFieldExpression><![CDATA[$F{property_tax_generation_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

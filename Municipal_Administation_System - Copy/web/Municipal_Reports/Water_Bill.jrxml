@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Water_Bill" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a711036-7722-4da0-8149-f973a72b1d68">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="14"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="299413f0-f5ba-41cb-b7d5-1516e80e5931"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     water_bill_generation.`bid` AS water_bill_generation_bid,
+     water_bill_generation.`owner` AS water_bill_generation_owner,
+     water_bill_generation.`meter` AS water_bill_generation_meter,
+     water_bill_generation.`bdate` AS water_bill_generation_bdate,
+     water_bill_generation.`bno` AS water_bill_generation_bno,
+     water_bill_generation.`bpform` AS water_bill_generation_bpform,
+     water_bill_generation.`todate` AS water_bill_generation_todate,
+     water_bill_generation.`preading` AS water_bill_generation_preading,
+     water_bill_generation.`creading` AS water_bill_generation_creading,
+     water_bill_generation.`csmp` AS water_bill_generation_csmp,
+     water_bill_generation.`amount` AS water_bill_generation_amount,
+     water_bill_generation.`aamount` AS water_bill_generation_aamount,
+     water_bill_generation.`penalty` AS water_bill_generation_penalty,
+     water_bill_generation.`tamount` AS water_bill_generation_tamount,
+     water_bill_generation.`status` AS water_bill_generation_status
+FROM
+     `water_bill_generation` water_bill_generation]]>
+	</queryString>
+	<field name="water_bill_generation_bid" class="java.lang.Integer"/>
+	<field name="water_bill_generation_owner" class="java.lang.String"/>
+	<field name="water_bill_generation_meter" class="java.lang.String"/>
+	<field name="water_bill_generation_bdate" class="java.lang.String"/>
+	<field name="water_bill_generation_bno" class="java.lang.String"/>
+	<field name="water_bill_generation_bpform" class="java.lang.String"/>
+	<field name="water_bill_generation_todate" class="java.sql.Date"/>
+	<field name="water_bill_generation_preading" class="java.lang.Integer"/>
+	<field name="water_bill_generation_creading" class="java.lang.Integer"/>
+	<field name="water_bill_generation_csmp" class="java.lang.Integer"/>
+	<field name="water_bill_generation_amount" class="java.lang.Long"/>
+	<field name="water_bill_generation_aamount" class="java.lang.Long"/>
+	<field name="water_bill_generation_penalty" class="java.lang.Long"/>
+	<field name="water_bill_generation_tamount" class="java.lang.Long"/>
+	<field name="water_bill_generation_status" class="java.lang.String"/>
+	<group name="water_bill_generation_bid">
+		<groupExpression><![CDATA[$F{water_bill_generation_bid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="325" y="0" width="165" height="41" uuid="6605a112-72e1-44ec-98f1-f66438c86378"/>
+				<textElement>
+					<font fontName="Arial Black" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Water Bill Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="17" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="28" height="20" uuid="74402196-cad2-4738-a0a2-4d8e87b1f8bb"/>
+				<text><![CDATA[C.Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="0" width="138" height="20" uuid="77a72f19-ab7c-4bc8-901a-bdf79a261a9a"/>
+				<text><![CDATA[ Owner Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="0" width="53" height="20" uuid="819c3cc9-2907-4c4b-80ed-fb8f6ad5a846"/>
+				<text><![CDATA[Meter NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="219" y="0" width="53" height="20" uuid="4c1f8b1c-7467-4359-90f9-6a32552d327c"/>
+				<text><![CDATA[Bill Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="282" y="0" width="43" height="20" uuid="f3b0cca5-b5a0-4755-9048-f52de8ae31ad"/>
+				<text><![CDATA[Bill NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="0" width="53" height="20" uuid="85a9eb73-56d7-4215-b761-dee052156d91"/>
+				<text><![CDATA[From]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="0" width="65" height="20" uuid="b18a8f15-7e16-478b-8f86-1ab489f65e27"/>
+				<text><![CDATA[Upto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="0" width="39" height="20" uuid="da22c53b-c384-4fed-b6a8-8aa2b339bfd4"/>
+				<text><![CDATA[Privious Readings]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="0" width="38" height="20" uuid="b0df5be7-4bef-46f6-86f8-917dc6512338"/>
+				<text><![CDATA[Current Reading]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="0" width="39" height="20" uuid="49152ea8-c3e6-44ac-9a7f-f1f64aaa17c1"/>
+				<text><![CDATA[Use]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="581" y="0" width="41" height="20" uuid="52a50da3-60a3-4c0f-8453-84be6b9b6cfb"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="622" y="0" width="41" height="20" uuid="c747efd4-84c9-4a18-85b3-20f687b78757"/>
+				<text><![CDATA[Arrears]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="663" y="0" width="44" height="20" uuid="572790cc-3a2d-4975-a765-9ccf11a8d44c"/>
+				<text><![CDATA[Penalty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="707" y="0" width="35" height="20" uuid="fafe191c-e759-43b6-99fe-9bb73f7102df"/>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="742" y="0" width="53" height="20" uuid="924e6ff3-ac1d-4445-b12f-2a9eae011f3d"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="795" height="1" uuid="f0d4e1d4-dc5f-41f7-a0d4-82b2663b1646"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="28" height="20" uuid="bdf14364-3e1b-4307-aadd-30c39dc06f6f"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_bid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="0" width="138" height="20" uuid="56006fd0-1090-406b-8252-46f24b7d0ab0"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_owner}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="0" width="53" height="20" uuid="22f51695-7b72-4b47-ab00-c5e9ebc018a4"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_meter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="0" width="53" height="20" uuid="fc1458a3-dd07-4c97-9300-c393e5d739db"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_bdate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="0" width="43" height="20" uuid="f1b68a4a-4747-4873-b914-f1a9ff85bbe8"/>
+				<textElement>
+					<font size="10" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_bno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="0" width="53" height="20" uuid="4796b8c9-7591-491b-858b-63f84b3446c6"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_bpform}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="0" width="65" height="20" uuid="a1f3f7ac-db56-4886-98a5-87f830d7b771"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_todate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="0" width="39" height="20" uuid="e1ff21b0-668c-4dc0-9584-d93dda393e81"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_preading}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="504" y="0" width="38" height="20" uuid="ae7c9c89-9402-4176-b0f6-527962164fbb"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_creading}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="542" y="0" width="39" height="20" uuid="f71b37c3-2741-4ed6-b4da-3df513efda25"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_csmp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="581" y="0" width="41" height="20" uuid="a4c15af2-f54b-4f1f-8618-31f47e208201"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="622" y="0" width="41" height="20" uuid="55322ad3-5994-4275-8227-e98c8499cd01"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_aamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="663" y="0" width="44" height="20" uuid="10f12220-1a64-4318-a1f3-b607bbae90c5"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_penalty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="707" y="0" width="35" height="20" uuid="977978cc-cbe6-45b3-b22d-f3c0d71e713b"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_tamount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="742" y="0" width="53" height="20" uuid="f90eeec9-181f-40a0-860b-229b993eb847"/>
+				<textFieldExpression><![CDATA[$F{water_bill_generation_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

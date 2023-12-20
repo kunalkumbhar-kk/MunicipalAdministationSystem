@@ -1,0 +1,28 @@
+/* 
+    Document   : marathi
+    Created on : 9 Feb, 2022, 8:56:06 PM
+    Author     : DELL
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.div1
+{
+   width: 60%;
+   padding: 20px;
+   margin: auto;
+   margin-top: 60px;
+   background-color: ghostwhite;
+   border-radius: 30px;
+   box-shadow: 3px 3px 3px 3px gray;
+}
+label
+{
+    font-family: Aparajita;
+    margin: 8px 0px;
+    font-size: 55px;
+}

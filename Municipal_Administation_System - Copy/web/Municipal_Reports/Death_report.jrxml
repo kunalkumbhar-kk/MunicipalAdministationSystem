@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Death_report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e61b0efa-664e-4e24-abb7-b936b1fbcab1">
+	<property name="ireport.zoom" value="1.6105100000000008"/>
+	<property name="ireport.x" value="61"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     death_registration.`did` AS death_registration_did,
+     death_registration.`dname` AS death_registration_dname,
+     death_registration.`fname` AS death_registration_fname,
+     death_registration.`dod` AS death_registration_dod,
+     death_registration.`gender` AS death_registration_gender,
+     death_registration.`mname` AS death_registration_mname,
+     death_registration.`dplace` AS death_registration_dplace,
+     death_registration.`hname` AS death_registration_hname,
+     death_registration.`dob` AS death_registration_dob
+FROM
+     `death_registration` death_registration]]>
+	</queryString>
+	<field name="death_registration_did" class="java.lang.Integer"/>
+	<field name="death_registration_dname" class="java.lang.String"/>
+	<field name="death_registration_fname" class="java.lang.String"/>
+	<field name="death_registration_dod" class="java.lang.String"/>
+	<field name="death_registration_gender" class="java.lang.String"/>
+	<field name="death_registration_mname" class="java.lang.String"/>
+	<field name="death_registration_dplace" class="java.lang.String"/>
+	<field name="death_registration_hname" class="java.lang.String"/>
+	<field name="death_registration_dob" class="java.lang.String"/>
+	<group name="death_registration_did">
+		<groupExpression><![CDATA[$F{death_registration_did}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="320" y="2" width="135" height="35" uuid="f0673c36-815f-4e5f-b64a-5852d0184a33"/>
+				<textElement>
+					<font fontName="Arial Black" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Death Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="22" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" uuid="50467f24-7338-4874-a74e-873ee4f00e88"/>
+				<text><![CDATA[D.Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="104" height="20" uuid="9d244645-0124-4991-9707-61384dd97c99"/>
+				<text><![CDATA[Death Person]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="0" width="115" height="20" uuid="03b59692-3471-44b6-b7ae-515fc73d17e9"/>
+				<text><![CDATA[Father Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="249" y="0" width="71" height="20" uuid="e89987fa-0c44-4752-b736-725e56f59d45"/>
+				<text><![CDATA[Date of Death]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="59" height="20" uuid="b1134c3d-a38b-489f-bf2c-08253e483059"/>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="0" width="123" height="20" uuid="1c279aa4-3525-4e9b-b3c8-32569c7c6e76"/>
+				<text><![CDATA[Mother Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="0" width="89" height="20" uuid="9be4bc95-b64f-4b64-ac01-aa5c136a4a0b"/>
+				<text><![CDATA[Death Place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="623" y="0" width="89" height="20" uuid="b9857763-d71f-4b76-88a4-6b40f5d548fc"/>
+				<text><![CDATA[Hospital ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="0" width="89" height="20" uuid="a9967e37-c309-41d5-bcd0-45541187527a"/>
+				<text><![CDATA[Date of Birth]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="801" height="1" uuid="04a4d6dd-c25e-4257-9743-ea3ed95f0e97"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="16" height="20" uuid="a837f091-5b46-44a7-b8c6-285e9308740b"/>
+				<textFieldExpression><![CDATA[$F{death_registration_did}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="16" y="0" width="118" height="20" uuid="fba254b2-a4b6-4b63-b0d2-e5ca4d52746f"/>
+				<textFieldExpression><![CDATA[$F{death_registration_dname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="134" y="0" width="115" height="20" uuid="68aa92f3-5c50-4c87-8a44-b099b7131b10"/>
+				<textFieldExpression><![CDATA[$F{death_registration_fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="0" width="71" height="20" uuid="7471b938-cd99-416a-ad1d-f5ebb5f16816"/>
+				<textFieldExpression><![CDATA[$F{death_registration_dod}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="59" height="20" uuid="55aa4d6d-0514-4fd2-96a0-44531c20216e"/>
+				<textFieldExpression><![CDATA[$F{death_registration_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="0" width="123" height="20" uuid="4ee20b17-2363-4e2f-a4db-cc338a21d42a"/>
+				<textFieldExpression><![CDATA[$F{death_registration_mname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="534" y="0" width="89" height="20" uuid="6dd1cee7-4b44-4051-8976-cbfd85607a34"/>
+				<textFieldExpression><![CDATA[$F{death_registration_dplace}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="0" width="89" height="20" uuid="289774ca-238c-478b-a4e8-83c588048498"/>
+				<textFieldExpression><![CDATA[$F{death_registration_hname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="712" y="0" width="89" height="20" uuid="35d38a92-f2ed-4a82-a545-80d65c3378e9"/>
+				<textFieldExpression><![CDATA[$F{death_registration_dob}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

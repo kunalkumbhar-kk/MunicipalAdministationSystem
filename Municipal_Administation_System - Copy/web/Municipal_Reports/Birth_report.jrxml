@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Birth_report" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="acdfdbf9-16fa-4a24-a8ff-93cc5ffc90e7">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     birth_registration.`brid` AS birth_registration_brid,
+     birth_registration.`dob` AS birth_registration_dob,
+     birth_registration.`cs` AS birth_registration_cs,
+     birth_registration.`cname` AS birth_registration_cname,
+     birth_registration.`fname` AS birth_registration_fname,
+     birth_registration.`mname` AS birth_registration_mname,
+     birth_registration.`bplace` AS birth_registration_bplace,
+     birth_registration.`hname` AS birth_registration_hname
+FROM
+     `birth_registration` birth_registration]]>
+	</queryString>
+	<field name="birth_registration_brid" class="java.lang.Integer"/>
+	<field name="birth_registration_dob" class="java.lang.String"/>
+	<field name="birth_registration_cs" class="java.lang.String"/>
+	<field name="birth_registration_cname" class="java.lang.String"/>
+	<field name="birth_registration_fname" class="java.lang.String"/>
+	<field name="birth_registration_mname" class="java.lang.String"/>
+	<field name="birth_registration_bplace" class="java.lang.String"/>
+	<field name="birth_registration_hname" class="java.lang.String"/>
+	<group name="birth_registration_brid">
+		<groupExpression><![CDATA[$F{birth_registration_brid}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="353" y="10" width="122" height="33" uuid="f662a61c-8f4a-4911-91f3-b8319dd73922"/>
+				<textElement>
+					<font fontName="Arial Black" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Birth Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="29" height="20" uuid="b6085da6-c7f7-480a-87ec-14b3976eaed6"/>
+				<text><![CDATA[B.Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="0" width="57" height="20" uuid="36a83283-0013-4384-953e-b842cd4deaae"/>
+				<text><![CDATA[Birth Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="0" width="46" height="20" uuid="11ad8a4e-db78-4874-8121-507e4cf569b7"/>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="0" width="157" height="20" uuid="0de21801-b986-48c0-af2d-4b90ba80db0e"/>
+				<text><![CDATA[Child Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="175" height="20" uuid="17ea0eee-3cfd-435d-9a2e-0e7b8fc5ca06"/>
+				<text><![CDATA[Father Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="0" width="152" height="20" uuid="1fb8102c-24c9-4dce-b55a-e5d65f5044c5"/>
+				<text><![CDATA[Mother Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="0" width="73" height="20" uuid="393456ba-3c10-4818-b1e6-814e28dfcfb9"/>
+				<text><![CDATA[Birth Place]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="100" height="20" uuid="4915481d-a35f-4b68-af8f-a4129574c5a3"/>
+				<text><![CDATA[Hosptilat]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="20" width="800" height="1" uuid="38525b85-988b-4c7b-b1a6-698249d890d3"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="29" height="20" uuid="f54d7754-ebe6-436c-9935-c44f0986e9d7"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_brid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="29" y="0" width="57" height="20" uuid="f7b00dd5-3eb5-4c73-924a-83a486c6c745"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="0" width="46" height="20" uuid="2da20319-2a9a-49b1-8ebf-6e9200f204bf"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_cs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="143" y="0" width="157" height="20" uuid="c3654151-376a-4546-ac04-bc447ce0f69c"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_cname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="0" width="185" height="20" uuid="a42d8eb2-3ac3-465a-adf8-4ddfdd2e4e07"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="0" width="152" height="20" uuid="1a9ca3fc-0c11-40ab-b461-f5b8dc65edc9"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_mname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="627" y="0" width="73" height="20" uuid="5c4aee19-9633-447b-bbc7-badd3bb2ba80"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_bplace}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="100" height="20" uuid="a3900d7d-56ea-4e41-884c-cdccc7a2f64d"/>
+				<textFieldExpression><![CDATA[$F{birth_registration_hname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
